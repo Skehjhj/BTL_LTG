@@ -8,7 +8,7 @@
 #include <bitset>
 #include <array>
 
-class Componet;
+class Component;
 class Entity;
 
 using ComponentID = std::size_t;

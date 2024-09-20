@@ -42,6 +42,13 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "cinttypes": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "titlescreen": "cpp",
+        "string_view": "cpp",
+        "bit": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "optional": "cpp",
+        "numbers": "cpp"
     }
 }
