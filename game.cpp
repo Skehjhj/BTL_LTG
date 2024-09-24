@@ -55,7 +55,7 @@ void Game::run(const char* title, int xpos, int ypos, int width, int height, boo
             fbdR.y = 0;
 
             if(renderer){
-                SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
+                SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
                 isRunning = true;
             }
         }
