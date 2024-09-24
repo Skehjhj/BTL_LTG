@@ -1,9 +1,11 @@
 #include<texture.h>
 #include<game.h>
 #include<ECS/menu.h>
+#include<ECS/menu.h>
 #include<ECS/Components.h>
 #include<Vecto2D.h>
 #include<Collision.h>
+#include <SDL2/SDL.h>
 #include <SDL2/SDL.h>
 
 SDL_Renderer* Game::renderer = nullptr;
@@ -17,11 +19,14 @@ auto& player1(manager.addEntity());
 auto& player2(manager.addEntity());
 auto& score1(manager.addEntity());
 auto& score2(manager.addEntity());
+auto& score1(manager.addEntity());
+auto& score2(manager.addEntity());
 auto& player1_gkp(manager.addEntity());
 auto& player2_gkp(manager.addEntity());
 auto& ball(manager.addEntity());
 auto& ai_player(manager.addEntity());
 
+int playerScore1 = 0, playerScore2 = 0;
 int playerScore1 = 0, playerScore2 = 0;
 Game::Game(){
     isRunning = true;

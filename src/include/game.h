@@ -29,6 +29,7 @@ class Game{
         int gamemode = 0;
         int hitb = 0;
         bool quitMenu = false;
+        bool quitMenu = false;
         bool checkhit = true;
         Uint32 start;
 
@@ -41,6 +42,8 @@ class Game{
         Game();
         ~Game();
         void run(const char *title, int xpos, int ypos, int width, int height, bool fullscreen);
+
+        // int showMenu();
 
         // int showMenu();
 
@@ -58,6 +61,7 @@ class Game{
         static SDL_Event event;
         static vector<ColliderComponent*> colliders;
         SDL_Color white = {255, 255, 255, 255};
+        SDL_Color white = {255, 255, 255, 255};
     private:
         int count = 0;
         float curBallSpeed = BallSpeed;
@@ -65,9 +69,13 @@ class Game{
         
         // TTF_Font *font = TTF_OpenFont("AtariClassic-Regular.ttf", 20);
         // SDL_Surface *Screen;
+        
+        // TTF_Font *font = TTF_OpenFont("AtariClassic-Regular.ttf", 20);
+        // SDL_Surface *Screen;
         SDL_Window * window = NULL;  
         SDL_Texture* footballbg = NULL;
         SDL_Rect fbsrcR, fbdR;
+        
         
         // void ResetBall(const Vector2D& pos);
         // void LaunchBall(const Vector2D& dir);

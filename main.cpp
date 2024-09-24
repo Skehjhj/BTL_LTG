@@ -1,4 +1,5 @@
 #include <game.h>
+#include <game.h>
 
 Game *game = nullptr;
 int main(int argc, char *argv[]) {
@@ -7,6 +8,7 @@ int main(int argc, char *argv[]) {
     game = new Game();
     game->run("Tiny Football", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, Game::WIDTH, Game::HEIGHT, 0);
     while(game->running()){
+
 
         Fstart = SDL_GetTicks();
         if(!game->quitMenu) game->handleMenu();
