@@ -93,12 +93,21 @@ class Manager{
         void draw(){
             for(auto& e : entities) e->draw();
         }
-
         void refresh(){
             entities.erase(std::remove_if(std::begin(entities), std::end(entities), [](const std::unique_ptr<Entity> &e){
                 return !e->isActive();
             }), 
             std::end(entities));
+        }
+
+        void refreshEntity(Entity& entity) {
+            if (!entity.isActive()) {
+                entities.erase(std::remove_if(std::begin(entities), std::end(entities),
+                    [&entity](const std::unique_ptr<Entity>& e) {
+                        return e.get() == &entity;
+                    }),
+                    std::end(entities));
+            }
         }
 
         Entity& addEntity(){
