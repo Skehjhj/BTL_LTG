@@ -6,5 +6,6 @@
 #include <ECS/Keyboard.h>
 #include <ECS/Components.h>
 #include <ECS/Collider.h>
+#include <ECS/AIComponent.h>
 
 #endif
